@@ -1,0 +1,6 @@
+*.uce
+*.zip
+*.dpapi
+*.key
+*private*
+assets/
