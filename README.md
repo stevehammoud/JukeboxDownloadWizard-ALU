@@ -1,23 +1,18 @@
 # Jukebox Download Wizard for ALU
 
-Release binaries and signed update information for the AtGames Legends edition
-of JDW. Private development sources and signing credentials are not stored here.
+Community compatibility beta with RK3328/RK3399/RK3588 profile selection,
+optional main-display/rotation configuration, pinball controls and guide,
+per-device raw-input filtering, and explicit experimental beta update eligibility.
 
-The 0.1.0-beta.7 prerelease is an **application-only update** for the existing
-beta.5/beta.6 split prototype. It is not a fresh-install ZIP and cannot update
-older embedded beta.2/beta.3/beta.4 carts. See the release's READ-ME-FIRST.md.
+Existing split installations use the app-only update. New testers use the
+complete Installer ZIP; no One Sauce installation is required. Stable UCE and
+bootstrap remain the accepted bytes. Cache, cookies, queue and library persist.
 
-The stable UCE contains the launcher, graphics runtime and BYOG artwork.
-Jukebox Download Wizard/.app/JDW.app contains the native app and download tools.
-Normal updates replace the app image while leaving the UCE/bootstrap and user
-data in place. These packages are not encryption. Runtime notices ship in-app.
+HA8801 baseline tested on beta.7. Beta.8 real-device acceptance is pending on
+all models; HA8800/HA8802/HA8818/HA8819/HA2818/HA2819/HA9901 are experimental.
+Read COMPATIBILITY.md and TEST-CASES.md. This prerelease is available for community compatibility testing.
+Real-device acceptance remains pending on every model for beta.8.
 
-The beta.5 -> beta.6 local signed update/restart passed on HA8801/RK3328,
-kernel 4.4.159. Beta.7 GitHub delivery and hardware acceptance are pending;
-other models/firmware are unverified and not enabled by this manifest.
-
-The beta.6 diagnostic install checks GitHub after its one-time
-settings/update-test-mode marker is removed. Public-feed beta.7 disables
-local-test mode. Startup offers A to install or B to continue; signatures,
-compatibility, space, hashes, health and rollback are checked. Draft releases
-are invisible to the anonymous ALU feed. See UPDATE-FORMAT.md for protocol 2.
+See the release READ-ME-FIRST.md for installation and cookie placement.
+Private development trees and signing credentials are not published. Third-party
+notices are inside the app. See UPDATE-FORMAT.md for signed protocol-2 updates.
