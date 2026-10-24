@@ -35,3 +35,11 @@ restored. Final exit stops helpers and releases app/graphics/Node mounts.
 Settings, cookies, queue, library and caches are outside the bundle. UCE and
 bootstrap upgrades remain separate/manual; protocol 1 UCE-update archives
 are incompatible. Signing credentials are maintained separately from this repo.
+
+
+Beta.8 adds a separate fresh_installer asset; normal updates MUST continue to
+use install_bundle (app-only). experimental_models_for_this_package is a signed
+allowlist accepted only by beta.8+ beta-channel builds with experimental support
+enabled. It is never a substitute for tested_models_for_this_package on stable.
+An unknown model is not implicitly allowed merely because a SoC is recognized.
+All beta.8 hardware acceptance is pending; HA8801 has beta.7 baseline evidence.
