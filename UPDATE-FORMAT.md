@@ -42,4 +42,5 @@ use install_bundle (app-only). experimental_models_for_this_package is a signed
 allowlist accepted only by beta.8+ beta-channel builds with experimental support
 enabled. It is never a substitute for tested_models_for_this_package on stable.
 An unknown model is not implicitly allowed merely because a SoC is recognized.
-All beta.8 hardware acceptance is pending; HA8801 has beta.7 baseline evidence.
+HA8801 beta.8 GitHub update and media acceptance passed. Beta.9 hardware
+acceptance remains pending; the update protocol and eligibility rules are unchanged.
