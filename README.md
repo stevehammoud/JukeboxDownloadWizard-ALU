@@ -1,18 +1,25 @@
 # Jukebox Download Wizard for ALU
 
-Community compatibility beta with RK3328/RK3399/RK3588 profile selection,
-optional main-display/rotation configuration, pinball controls and guide,
-per-device raw-input filtering, and explicit experimental beta update eligibility.
+Cookie setup and access-test beta for Jukebox Download Wizard ALU.
 
-Existing split installations use the app-only update. New testers use the
-complete Installer ZIP; no One Sauce installation is required. Stable UCE and
-bootstrap remain the accepted bytes. Cache, cookies, queue and library persist.
+Settings now shows Missing, Present (not tested), Authenticated or Authentication
+Failed, with Test YouTube Access and cookie placement instructions. Network,
+timeout or unknown responses are inconclusive. The bounded, cancellable test
+checks YouTube's reported sign-in state without downloading video or starting
+Node. It runs only while playback/search/download work is idle.
 
-HA8801 baseline tested on beta.7. Beta.8 real-device acceptance is pending on
-all models; HA8800/HA8802/HA8818/HA8819/HA2818/HA2819/HA9901 are experimental.
-Read COMPATIBILITY.md and TEST-CASES.md. This prerelease is available for community compatibility testing.
-Real-device acceptance remains pending on every model for beta.8.
+Existing beta.8 installations update only the app through the ALU GitHub prompt;
+new users use the complete Installer ZIP. Stable UCE/bootstrap, cookies,
+settings, queue, library and persistent solver cache are preserved. One Sauce
+or One Saucier is not required. No cookie file is bundled.
 
-See the release READ-ME-FIRST.md for installation and cookie placement.
-Private development trees and signing credentials are not published. Third-party
-notices are inside the app. See UPDATE-FORMAT.md for signed protocol-2 updates.
+HA8801/RK3328 passed beta.8 GitHub updates and media tests. Beta.9 hardware,
+fresh-install and GitHub-to-ALU acceptance remain pending. Other listed models
+remain experimental. Read READ-ME-FIRST.md, TEST-CASES.md and COMPATIBILITY.md.
+
+
+Download the release Installer ZIP for a new installation. Existing split
+installations use the built-in signed update. See the release test cases and
+feedback instructions. Never share your cookie file. Private development
+sources and signing credentials are not published; third-party notices remain
+inside the app. See UPDATE-FORMAT.md for protocol-2 app updates.
