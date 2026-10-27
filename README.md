@@ -1,26 +1,58 @@
 # Jukebox Download Wizard for ALU
 
-# JDW ALU beta.11 - controlled update-handoff diagnostic
+## Community testing beta.12
 
-HA8801/RK3328 diagnostic; cabinet acceptance pending. This is not a confirmed graphics fix. Beta.9 remains withdrawn. Beta.8 remains the accepted community baseline. Three local beta.10 restarts passed; the real downloaded-update handoff is the remaining test.
+**Start here:** [Download the complete installer](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/JukeboxDownloadWizard-ALU-Installer-0.1.0-beta.12.zip).
 
-IMPORTANT: existing installations must have recovery-r2 Jukebox Download Wizard.uce before accepting this update. Replace only the root UCE using JDW-ALU-UCE-Recovery-Fix-r2.zip. Old beta.8 UCEs cannot execute rollback commands correctly on tested firmware; app-only updates cannot repair this and old beta.8 updaters cannot enforce the prerequisite. The complete Installer ZIP includes the repaired UCE. This diagnostic is for the owner's controlled test; other models are not enabled.
+New users and existing split-beta users use this same installer once. Extract
+to the USB/SSD root and merge existing folders, replacing the UCE, 00_start.sh
+and .app/JDW.app as a matched set. Keep cookies, settings, queue, library,
+backups and solver cache. Documentation is in Jukebox Download Wizard/docs.
 
-1. Restore J: to beta.8 with the supplied restore journal if beta.10 is installed. Keep the repaired UCE and all other files.
-2. Accept beta.11 from the ALU GitHub update prompt. Signature and SHA-256 verification, backup, installation and restart are handled by JDW.
-3. If it opens, visit all tabs, leave it open 30 seconds, then exit normally to accept the trial. Relaunch and confirm beta.11. Test P1 Restart JDW twice.
-4. If it crashes or loses HDMI signal, stop and return the drive for log capture before further launches or testing the main SSD. Preserve the logs even if automatic recovery restores beta.8.
-5. Before repeating on the main SSD, verify that SSD also has recovery-r2. Save its prior logs separately.
+- [Cookie export guide](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/Cookie-Export-Guide.pdf)
+- [Installation guide](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/READ-ME-FIRST.md)
+- [One-time migration](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/MIGRATION.md)
+- [Compatibility and experimental models](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/COMPATIBILITY.md)
+- [Test checklist and feedback logs](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.12/TEST-CASES.md)
 
-The normal automatic update check and preview warm-up are restored on ordinary launches. The existing first-boot trial still defers them. Diagnostics record exact render stage, frame counters, ARM registers, first presents, startup/cleanup timing and resource limits. Graphics libraries, rendering call order, audio/video decoder and solver cache implementation are retained. No raw cookies, account details or webpage contents are added to diagnostics.
+Download **JukeboxDownloadWizard-ALU-Installer-0.1.0-beta.12.zip** for a new
+installation OR the one-time migration from earlier beta builds. It includes
+the repaired UCE, generation-5 launcher, application, cookie-export PDF and
+setup/test/compatibility guides. Extract to the USB/SSD root; merge existing
+folders and replace all three program files. Keep cookies, settings, queue,
+media, backups and solver cache. See MIGRATION.md before updating an old beta.
 
-Settings includes cookie status and Test YouTube Access. No One Sauce or cookies are needed for startup, local library or GitHub updates. Online video functions require your own Netscape cookie file at Jukebox Download Wizard/settings/ytcookies.txt. Cookies, settings, queue, library and persistent solver cache are preserved by app updates.
+Older apps do not offer beta.12 automatically: the signed manifest requires
+installer generation 5 so an app-only update cannot leave the faulty old UCE
+in use. The new launcher verifies recovery-r2 before running JDW. Once migrated,
+future eligible signed app updates continue through the built-in ALU updater.
 
-The trial requires 20 seconds, 120 frames and clean exit for acceptance. Later ordinary restarts are not themselves new first-boot trials.
+HA8801/RK3328 has owner beta.11 update/media acceptance. HA8800/HA8802 (RK3328),
+HA8818/HA8819/HA2818/HA2819 (RK3399), and HA9901 (RK3588) have experimental
+profiles and need community hardware testing. Beta.12 final owner checks passed
+on HA8801: generation-5 recovery verification, five launches, two in-app
+restarts, local playback/fullscreen and three clean exits. Cookie/search/download
+acceptance is from the unchanged beta.11 baseline. No universal
+firmware or display compatibility is claimed. See COMPATIBILITY.md.
 
-Feedback: share logs/support-report.txt, logs/player.log, logs/entry.log, logs/display.log and root scripter.log for startup failure. Include model/firmware if known, port/hub, steps and symptoms. Review logs before posting. Never share cookies, credentials, settings/cache directories or media.
+The player, audio/video pacing, GPU libraries and solver cache implementation
+are retained from beta.11. Support-report version is corrected, experimental
+update eligibility restored, and migration is now enforced. Earlier beta.9 Mali
+failure did not recur in beta.11 tests; its root cause remains unconfirmed.
+Three temporary streamed underruns around button actions on slow USB remain a
+follow-up; saved-library playback had none. SSD with powered hub is recommended.
+No One Sauce/One Saucier or URL-list file is required. Online video functions
+need the user's own cookie file; local playback/startup/updates do not.
 
-Accepted community baseline: [beta.8](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/tag/v0.1.0-beta.8).
-Controlled diagnostic: [beta.11](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/tag/v0.1.0-beta.11).
+### Setup and feedback
 
-Private source and signing credentials are not published. Third-party notices are bundled.
+Installer documentation is in Jukebox Download Wizard/docs. Read READ-ME-FIRST.md,
+MIGRATION.md, Cookie-Export-Guide.pdf and TEST-CASES.md.
+Share model/firmware if known, port/hub/display/controls, test case and steps,
+expected/actual result, plus logs/support-report.txt, player.log, entry.log,
+display.log; add root scripter.log for startup failure. Review logs before
+posting. Never upload cookies, credentials, settings/cache folders or media.
+Stop and capture logs after a crash before repeated launches.
+
+Private development source and signing credentials are not published.
+Third-party notices are bundled. See UPDATE-FORMAT.md for the signed updater.
