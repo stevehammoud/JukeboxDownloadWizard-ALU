@@ -1,26 +1,26 @@
 # Jukebox Download Wizard for ALU
 
-The current public community test release is **0.1.0-beta.8**:
-https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/tag/v0.1.0-beta.8
+# JDW ALU beta.11 - controlled update-handoff diagnostic
 
-Beta.9 has been withdrawn after an HA8801 startup failure and a failed automatic
-rollback. Its assets are retained privately as a draft for investigation.
-Please use beta.8 while a corrected candidate is tested. Beta.8 fresh startup
-without One Sauce/cookies and clean exit passed on the maintainer's HA8801.
-Other cabinet/display/controller combinations remain experimental.
+HA8801/RK3328 diagnostic; cabinet acceptance pending. This is not a confirmed graphics fix. Beta.9 remains withdrawn. Beta.8 remains the accepted community baseline. Three local beta.10 restarts passed; the real downloaded-update handoff is the remaining test.
 
-For a new installation, use the complete Installer ZIP from the beta.8 release.
-It includes the stable UCE and separate opaque application image. No One Sauce,
-One Saucier or old JDW test/player folders are required. Existing split installs
-normally use the signed app-only updater; user settings, cookies, queue, library
-and persistent solver cache remain outside the application image.
+IMPORTANT: existing installations must have recovery-r2 Jukebox Download Wizard.uce before accepting this update. Replace only the root UCE using JDW-ALU-UCE-Recovery-Fix-r2.zip. Old beta.8 UCEs cannot execute rollback commands correctly on tested firmware; app-only updates cannot repair this and old beta.8 updaters cannot enforce the prerequisite. The complete Installer ZIP includes the repaired UCE. This diagnostic is for the owner's controlled test; other models are not enabled.
 
-YouTube search, previews and downloads require your own Netscape-format cookie
-file at Jukebox Download Wizard/settings/ytcookies.txt. Local library use and
-GitHub update checks do not require cookies. Never share your cookie file.
+1. Restore J: to beta.8 with the supplied restore journal if beta.10 is installed. Keep the repaired UCE and all other files.
+2. Accept beta.11 from the ALU GitHub update prompt. Signature and SHA-256 verification, backup, installation and restart are handled by JDW.
+3. If it opens, visit all tabs, leave it open 30 seconds, then exit normally to accept the trial. Relaunch and confirm beta.11. Test P1 Restart JDW twice.
+4. If it crashes or loses HDMI signal, stop and return the drive for log capture before further launches or testing the main SSD. Preserve the logs even if automatic recovery restores beta.8.
+5. Before repeating on the main SSD, verify that SSD also has recovery-r2. Save its prior logs separately.
 
-Read the release README, TEST-CASES.md, COMPATIBILITY.md and feedback instructions.
-Report results through GitHub Issues and attach only reviewed diagnostic logs.
-Private development sources and signing credentials are not published.
-Third-party notices remain inside the application. See UPDATE-FORMAT.md for the
-signed application update format.
+The normal automatic update check and preview warm-up are restored on ordinary launches. The existing first-boot trial still defers them. Diagnostics record exact render stage, frame counters, ARM registers, first presents, startup/cleanup timing and resource limits. Graphics libraries, rendering call order, audio/video decoder and solver cache implementation are retained. No raw cookies, account details or webpage contents are added to diagnostics.
+
+Settings includes cookie status and Test YouTube Access. No One Sauce or cookies are needed for startup, local library or GitHub updates. Online video functions require your own Netscape cookie file at Jukebox Download Wizard/settings/ytcookies.txt. Cookies, settings, queue, library and persistent solver cache are preserved by app updates.
+
+The trial requires 20 seconds, 120 frames and clean exit for acceptance. Later ordinary restarts are not themselves new first-boot trials.
+
+Feedback: share logs/support-report.txt, logs/player.log, logs/entry.log, logs/display.log and root scripter.log for startup failure. Include model/firmware if known, port/hub, steps and symptoms. Review logs before posting. Never share cookies, credentials, settings/cache directories or media.
+
+Accepted community baseline: [beta.8](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/tag/v0.1.0-beta.8).
+Controlled diagnostic: [beta.11](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/tag/v0.1.0-beta.11).
+
+Private source and signing credentials are not published. Third-party notices are bundled.
