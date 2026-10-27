@@ -42,5 +42,9 @@ use install_bundle (app-only). experimental_models_for_this_package is a signed
 allowlist accepted only by beta.8+ beta-channel builds with experimental support
 enabled. It is never a substitute for tested_models_for_this_package on stable.
 An unknown model is not implicitly allowed merely because a SoC is recognized.
-HA8801 beta.8 GitHub update and media acceptance passed. Beta.9 hardware
-acceptance remains pending; the update protocol and eligibility rules are unchanged.
+All beta.8 hardware acceptance is pending; HA8801 has beta.7 baseline evidence.
+
+
+## Recovery-r2 requirement for beta.11 diagnostic
+
+Old beta.8 UCEs have a rollback utility-path defect. App-only updates cannot repair it. Replace the root UCE with recovery-r2 before accepting beta.11. New complete installers include the repair. Old beta.8 updaters ignore the extra signed required_recovery_UCE field; this controlled diagnostic has a manual prerequisite. An enforceable migration remains required before broader rollout.
