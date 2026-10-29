@@ -43,7 +43,7 @@ Extraction places both files in that folder on your app drive. To use them with 
 - Automatic lightweight previews; video details show the available download resolution up to 1080p. Download Resolution remains separate from preview playback.
 - Optional static and animated **BitLCD marquee artwork included in the installer**.
 
-The original affected community tester confirmed the startup, One Sauce handoff and trackball deletion corrections. Owner tests also cover library actions, playback and clean exits. The subsequent artwork packaging change leaves the tested app, startup script and UCE unchanged. [Validation details](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.13/VALIDATION.json) distinguish tested behavior from pending device acceptance. Slow-storage preview/publish investigations remain open in [Issues](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/issues).
+The original affected community tester confirmed the startup, One Sauce handoff and trackball deletion corrections. Owner tests also cover library actions, playback and clean exits. The subsequent artwork packaging change leaves the tested app, startup script and UCE unchanged. [Validation details](https://github.com/stevehammoud/JukeboxDownloadWizard-ALU/releases/download/v0.1.0-beta.13/VALIDATION.json) distinguish tested behavior from pending device acceptance.
 
 ### Hardware and testing scope
 
